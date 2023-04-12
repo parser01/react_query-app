@@ -2,9 +2,9 @@
 
 This project includes 2 branches.
 
-`feature/task 1` branch uses `React Query` and implements search, autocomplete and pagination functionalities. It uses The Rick and Morty API REST(ish) API.
+`feature/task1` branch uses `React Query` and implements search, autocomplete and pagination functionalities. It uses The Rick and Morty API REST(ish) API.
 
-`feature/task 2` branch implements design via `styled-components`.
+`feature/task2` branch implements design via `styled-components`.
 
 ## Available Scripts
 
