@@ -6,11 +6,7 @@ import { useMemo, useState } from "react";
 import { getCharacters } from "../../api/characters";
 import { SearchInput } from "../UI/SearchInput";
 
-let render = 0;
-
 export function CharacterList() {
-	console.log("render", ++render);
-
 	const [search, setSearch] = useState("");
 	const [page, setPage] = useState(1);
 
@@ -20,17 +16,11 @@ export function CharacterList() {
 		keepPreviousData: true,
 	});
 
-	console.log("data", data);
-	console.log("isLoading", isLoading);
-	console.log("isError", isError);
-
 	const characters = useMemo(() => {
-		console.log("useMemo characters");
 		return data?.results || [];
 	}, [data]);
 
 	const searchedCharacters = useMemo(() => {
-		console.log("useMemo searchedCharacters");
 		return characters.filter((character) => {
 			return character.name.toLowerCase().includes(search.toLowerCase());
 		});
